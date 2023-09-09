@@ -5,13 +5,13 @@ import { Button, Table } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 
 const Pubg_clanList = () => {
-  const [employees, setEmployees] = useState([]);
+  const [Pubg_clans, setPubg_clan] = useState([]);
   const [loading, setLoading] = useState(false);
   const { token, setToken, setIsAuthenticated } = useAuth();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const url = `${import.meta.env.VITE_API_URL}/employees`;
+    const url = `${import.meta.env.VITE_API_URL}/Pubg_clans`;
     const controller = new AbortController();
 
     const requestOptions = {
@@ -27,7 +27,7 @@ const Pubg_clanList = () => {
     fetch(url, requestOptions)
       .then((response) => response.json())
       .then((json) => {
-        setEmployees(json);
+       setPubg_clan(json);
         setLoading(false);
       })
       .catch((err) => console.log(err));
@@ -39,13 +39,13 @@ const Pubg_clanList = () => {
 
   return (
     <>
-      <h2>Employee List</h2>
+      <h2>Pubg_clan List</h2>
       {loading ? (
         <h3>Loading...</h3>
       ) : (
         <>
           <p>
-            <Link to="/employees/create">Create New Employee</Link>
+            <Link to="/Pubg_clans/create">Create New Pubg_clan</Link>
           </p>
 
           <Table striped bordered hover>
@@ -58,13 +58,13 @@ const Pubg_clanList = () => {
               </tr>
             </thead>
             <tbody>
-              {employees.map((employee) => (
-                <tr key={employee.id}>
-                  <td>{employee.first_name}</td>
-                  <td>{employee.last_name}</td>
-                  <td>{employee.email}</td>
+              {Pubg_clans.map((Pubg_clan) => (
+                <tr key={Pubg_clan.id}>
+                  <td>{Pubg_clan.first_name}</td>
+                  <td>{Pubg_clan.last_name}</td>
+                  <td>{Pubg_clan.email}</td>
                   <td>
-                    <Link to={`employees/${employee.id}`}>
+                    <Link to={`Pubg_clans/${Pubg_clan.id}`}>
                       <Button>
                         <Search />
                       </Button>

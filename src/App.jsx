@@ -1,35 +1,50 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import EmployeeCreate from "./pages/Pubg_clanCreate";
+import EmployeeList from "./pages/Pubg_clanList";
+import EmployeeView from "./pages/Pubg_clanView";
+import EmployeeEdit from "./pages/Pubg_clanEdit";
+import Login from "./pages/Login";
+import Logout from "./pages/Logout";
+
+
+import NotFoundPageComponent from "./components/NotFoundPageComponent";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+import { AuthProvider } from "./contexts/AuthContext";
+import SecureRoute from "./SecureRoute";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
+import NavbarComponent from "./components/NavbarComponent";
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+
+      <NavbarComponent />
+      <Container>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<SecureRoute />}>
+              <Route path="/" element={<EmployeeList />}></Route>
+              <Route path="/pubg_clans/:id" element={<EmployeeView />}></Route>
+              <Route path="*" element={<NotFoundPageComponent />}></Route>
+              <Route
+                path="/employees/create"
+                element={<EmployeeCreate />}
+              ></Route>
+              <Route
+                path="/pubg_clans/edit/:id"
+                element={<EmployeeEdit />}
+              ></Route>
+              <Route path="/logout2" element={<Logout2 />}></Route>
+            </Route>
+            <Route path="/login2" element={<Login2 />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </Container>
+
     </>
-  )
+  );
 }
 
-export default App
+export default App;

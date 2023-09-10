@@ -1,14 +1,15 @@
-import EmployeeCreate from "./pages/Pubg_clanCreate";
-import EmployeeList from "./pages/Pubg_clanList";
-import EmployeeView from "./pages/Pubg_clanView";
-import EmployeeEdit from "./pages/Pubg_clanEdit";
-import Login from "./pages/Login";
-import Logout from "./pages/Logout";
+
+
+import Pubg_clanCreate from "./pages/Pubg_clanCreate";
+import Pubg_clanEdit from "./pages/Pubg_clanEdit";
+import Pubg_clanList from "./pages/Pubg_clanList";
+import Pubg_clanView from "./pages/Pubg_clanView";
+import Login2 from "./pages/Login2";
+import Logout2 from "./pages/Logout2";
 
 
 import NotFoundPageComponent from "./components/NotFoundPageComponent";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import { AuthProvider } from "./contexts/AuthContext";
 import SecureRoute from "./SecureRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -25,16 +26,16 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route element={<SecureRoute />}>
-              <Route path="/" element={<EmployeeList />}></Route>
-              <Route path="/pubg_clans/:id" element={<EmployeeView />}></Route>
+              <Route path="/" element={<Pubg_clanList />}></Route>
+              <Route path="/pubg_clans/:id" element={<Pubg_clanView />}></Route>
               <Route path="*" element={<NotFoundPageComponent />}></Route>
               <Route
-                path="/employees/create"
-                element={<EmployeeCreate />}
+                path="/Pubg_clans/create"
+                element={<Pubg_clanCreate />}
               ></Route>
               <Route
                 path="/pubg_clans/edit/:id"
-                element={<EmployeeEdit />}
+                element={<Pubg_clanEdit />}
               ></Route>
               <Route path="/logout2" element={<Logout2 />}></Route>
             </Route>

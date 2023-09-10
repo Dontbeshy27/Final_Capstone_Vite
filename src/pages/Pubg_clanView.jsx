@@ -2,17 +2,19 @@ import { useEffect, useState } from "react";
 import { useParams, Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
-const EmployeeView = () => {
+const Pubg_clanView = () => {
   const { id } = useParams();
-  const [employee, setEmployee] = useState({
-    first_name: "",
-    last_name: "",
+  const [pubg_clan, setPubg_clan] = useState ({
+    userName: "",
+    password: "",
     email: "",
-    gender: "",
+    clanName: "",
+    ingameName: "",
+    role: "",
   });
   const [loading, setLoading] = useState(false);
   const { token } = useAuth();
-  const url = `${import.meta.env.VITE_API_URL}/employees/${id}`;
+  const url = `${import.meta.env.VITE_API_URL}/pubg_clans/${id}`;
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -42,7 +44,7 @@ const EmployeeView = () => {
 
   const handleDelete = (e) => {
     e.preventDefault();
-    if (window.confirm("Are you sure you want to Delete this Employee?")) {
+    if (window.confirm("Are you sure you want to Delete this Pubg clan?")) {
       const requestOptions = {
         method: "DELETE",
         headers: {
@@ -61,45 +63,50 @@ const EmployeeView = () => {
 
   return (
     <>
-      <h2>Employee View</h2>
+      <h2>Pubg clan View</h2>
       {loading ? (
         <h3>Loading...</h3>
       ) : (
         <>
           <p>
             <label>
-              First Name <strong>{employee.first_name}</strong>
+            User Name <strong>{pubg_clan.userName}</strong>
+            </label>
+          </p>
+          <p>
+          <label>
+            Password <strong>{pubg_clan.password}</strong>
             </label>
           </p>
           <p>
             <label>
-              Last Name <strong>{employee.last_name}</strong>
+             Email <strong>{pubg_clan.email}</strong>
             </label>
           </p>
           <p>
             <label>
-              Age <strong>{employee.age}</strong>
+            Clan Name <strong>{pubg_clan.clanName}</strong>
             </label>
           </p>
           <p>
             <label>
-              Email <strong>{employee.email}</strong>
+            Ingame Name <strong>{pubg_clan.ingameName}</strong>
             </label>
           </p>
           <p>
             <label>
-              Gender <strong>{employee.gender}</strong>
+              Role<strong>{pubg_clan.role}</strong>
             </label>
           </p>
 
           <p>
-            <Link to={"/"}>Back to List</Link>
+            <Link to={"/"}>Back to List of clans</Link>
           </p>
           <p>
-            <Link to={`/employees/edit/${id}`}>Edit</Link>
+            <Link to={`/pubg_clans/edit/${id}`}>Edit</Link>
           </p>
           <p>
-            <Link onClick={handleDelete}>Delete</Link>
+            <Link onClick={handleDelete}>Delete the clan</Link>
           </p>
         </>
       )}
@@ -107,4 +114,4 @@ const EmployeeView = () => {
   );
 };
 
-export default EmployeeView;
+export default Pubg_clanView;

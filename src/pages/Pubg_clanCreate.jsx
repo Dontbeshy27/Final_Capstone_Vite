@@ -3,12 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
 const Pubg_clanCreate = () => {
-  const [pubg_clan, setPubg_clan] = useState({
-    firstName: "",
-    lastName: "",
-    age: 0,
+    const [pubg_clan, setPubg_clan] = useState ({
+    userName: "",
+    password: "",
     email: "",
-    gender: "",
+    clanName: "",
+    ingameName: "",
+    role: "",
   });
   const { token } = useAuth();
   const navigate = useNavigate();
@@ -25,12 +26,12 @@ const Pubg_clanCreate = () => {
       },
 
       body: JSON.stringify({
-        user_name: employee.username,
-        password: employee.password,
-        email: employee.email,
-        clan_name: employee.clanname,
-        ingame_name: employee.ingamename,
-        role: employee.role,
+        user_name: pubg_clan.username,
+        password: pubg_clan.password,
+        email: pubg_clan.email,
+        clan_name: pubg_clan.clanname,
+        ingame_name: pubg_clan.ingamename,
+        role: pubg_clan.role,
       }),
     };
 
@@ -47,21 +48,21 @@ const Pubg_clanCreate = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setEmployee((prev) => {
+    setPubg_clan((prev) => {
       return { ...prev, [name]: value };
     });
   };
 
   return (
     <>
-      <h1>Employee Create</h1>
+      <h1>Clan Create</h1>
       <form onSubmit={handleSubmit}>
         <p>
           <label>Username</label>
           <input
             type="text"
             name="username"
-            value={employee.username}
+            value={pubg_clan.username}
             onChange={handleChange}
           />
         </p>
@@ -70,7 +71,7 @@ const Pubg_clanCreate = () => {
           <input
             type="text"
             name="password"
-            value={employee.password}
+            value={pubg_clan.password}
             onChange={handleChange}
           />
         </p>
@@ -79,7 +80,7 @@ const Pubg_clanCreate = () => {
           <input
             type="email"
             name="email"
-            value={employee.email}
+            value={pubg_clan.email}
             onChange={handleChange}
           />
         </p>
@@ -88,7 +89,7 @@ const Pubg_clanCreate = () => {
           <input
             type="text"
             name="clanname"
-            value={employee.clanname}
+            value={pubg_clan.clanname}
             onChange={handleChange}
           />
         </p>
@@ -97,7 +98,7 @@ const Pubg_clanCreate = () => {
           <input
             type="text"
             name="ingamename"
-            value={employee.ingamename}
+            value={pubg_clan.ingamename}
             onChange={handleChange}
           />
         </p>
@@ -106,7 +107,7 @@ const Pubg_clanCreate = () => {
           <input
             type="text"
             name="role"
-            value={employee.role}
+            value={pubg_clan.role}
             onChange={handleChange}
           />
         </p>
@@ -116,4 +117,4 @@ const Pubg_clanCreate = () => {
   );
 };
 
-export default Pubg_clanCreateCreate;
+export default Pubg_clanCreate;

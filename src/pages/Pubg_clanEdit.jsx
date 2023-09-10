@@ -2,21 +2,22 @@ import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
-const EmployeeEdit = () => {
+const Pubg_clanEdit = () => {
   const { id } = useParams();
-  const [employee, setEmployee] = useState({
-    first_name: "",
-    last_name: "",
-    age: 0,
+  const [pubg_clan, setPubg_clan] = useState ({
+    userName: "",
+    password: "",
     email: "",
-    gender: "",
+    clanName: "",
+    ingameName: "",
+    role: "",
   });
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { token } = useAuth();
 
   useEffect(() => {
-    const url = `${import.meta.env.VITE_API_URL}/employees/${id}`;
+    const url = `${import.meta.env.VITE_API_URL}/pubg_clans/${id}`;
     const controller = new AbortController();
 
     const requestOptions = {
@@ -44,7 +45,7 @@ const EmployeeEdit = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    const url = `${import.meta.env.VITE_API_URL}/employees/${id}`;
+    const url = `${import.meta.env.VITE_API_URL}/pubg_clans/${id}`;
 
     const requestOptions = {
       method: "PATCH",
@@ -54,11 +55,12 @@ const EmployeeEdit = () => {
       },
 
       body: JSON.stringify({
-        first_name: employee.first_name,
-        last_name: employee.last_name,
-        age: employee.age,
-        email: employee.email,
-        gender: employee.gender,
+        user_name: pubg_clan.username,
+        password: pubg_clan.password,
+        email: pubg_clan.email,
+        clan_name: pubg_clan.clanname,
+        ingame_name: pubg_clan.ingamename,
+        role: pubg_clan.role,
       }),
     };
 
@@ -66,7 +68,7 @@ const EmployeeEdit = () => {
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
-        navigate(`/employees/${json.employee.id}`);
+        navigate(`/pubg_clans/${json.employee.id}`);
       })
       .catch((err) => {
         console.log(err);
@@ -82,59 +84,65 @@ const EmployeeEdit = () => {
 
   return (
     <>
-      <h2>Employee Edit</h2>
+      <h2>Please edit you clan</h2>
       {loading ? (
         <h3>Loading</h3>
       ) : (
         <form onSubmit={handleSubmit}>
-          <p>
-            <label>First Name</label>
-            <input
-              type="text"
-              name="first_name"
-              value={employee.first_name}
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <label>Last Name</label>
-            <input
-              type="text"
-              name="last_name"
-              value={employee.last_name}
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <label>Age</label>
-            <input
-              type="number"
-              name="age"
-              value={employee.age}
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <label>Email</label>
-            <input
-              type="email"
-              name="email"
-              value={employee.email}
-              onChange={handleChange}
-            />
-          </p>
-          <p>
-            <label>Gender</label>
-            <select
-              name="gender"
-              value={employee.gender}
-              onChange={handleChange}
-            >
-              <option value="">Select Gender</option>
-              <option value="Male">Male</option>
-              <option value="Female">Female</option>
-            </select>
-          </p>
+         <p>
+          <label>Username</label>
+          <input
+            type="text"
+            name="username"
+            value={pubg_clan.username}
+            onChange={handleChange}
+          />
+        </p>
+        <p>
+          <label>Password</label>
+          <input
+            type="text"
+            name="password"
+            value={pubg_clan.password}
+            onChange={handleChange}
+          />
+        </p>
+        <p>
+          <label>Email</label>
+          <input
+            type="email"
+            name="email"
+            value={pubg_clan.email}
+            onChange={handleChange}
+          />
+        </p>
+        <p>
+          <label>Clan Name</label>
+          <input
+            type="text"
+            name="clanname"
+            value={pubg_clan.clanname}
+            onChange={handleChange}
+          />
+        </p>
+        <p>
+          <label>Ingame Name</label>
+          <input
+            type="text"
+            name="ingamename"
+            value={pubg_clan.ingamename}
+            onChange={handleChange}
+          />
+        </p>
+        <p>
+          <label>Role</label>
+          <input
+            type="text"
+            name="role"
+            value={pubg_clan.role}
+            onChange={handleChange}
+          />
+        </p>
 
           <input type="submit" value="Update" />
         </form>
@@ -143,4 +151,4 @@ const EmployeeEdit = () => {
   );
 };
 
-export default EmployeeEdit;
+export default Pubg_clanEdit;

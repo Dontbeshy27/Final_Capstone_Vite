@@ -11,7 +11,7 @@ const Pubg_clanList = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const url = `${import.meta.env.VITE_API_URL}/Pubg_clans`;
+    const url = `${import.meta.env.VITE_API_URL}/pubg_clans`;
     const controller = new AbortController();
 
     const requestOptions = {
@@ -39,7 +39,7 @@ const Pubg_clanList = () => {
 
   return (
     <>
-      <h2>Pubg_clan List</h2>
+      <h2>PUBG CLAN</h2>
       {loading ? (
         <h3>Loading...</h3>
       ) : (
@@ -52,6 +52,7 @@ const Pubg_clanList = () => {
             <thead>
               <tr>
                 <th>User Name</th>
+                <th>Password</th>
                 <th>Email</th>
                 <th>Clan Name</th>
                 <th>Ingame Name</th>
@@ -63,6 +64,7 @@ const Pubg_clanList = () => {
               {Pubg_clans.map((Pubg_clan) => (
                 <tr key={Pubg_clan.id}>
                   <td>{Pubg_clan.user_name}</td>
+                  <td>{Pubg_clan.password}</td>
                   <td>{Pubg_clan.email}</td>
                   <td>{Pubg_clan.clan_name}</td>
                   <td>{Pubg_clan.ingame_name}</td>

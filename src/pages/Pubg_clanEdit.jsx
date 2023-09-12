@@ -5,11 +5,11 @@ import { useAuth } from "../contexts/AuthContext";
 const Pubg_clanEdit = () => {
   const { id } = useParams();
   const [pubg_clan, setPubg_clan] = useState ({
-    userName: "",
+    user_name: "",
     password: "",
     email: "",
-    clanName: "",
-    ingameName: "",
+    clan_name: "",
+    ingame_name: "",
     role: "",
   });
   const [loading, setLoading] = useState(false);
@@ -32,7 +32,7 @@ const Pubg_clanEdit = () => {
     fetch(url, requestOptions)
       .then((response) => response.json())
       .then((json) => {
-        setEmployee(json);
+        setPubg_clan(json);
         setLoading(false);
       })
       .catch((err) => console.log(err));
@@ -55,11 +55,11 @@ const Pubg_clanEdit = () => {
       },
 
       body: JSON.stringify({
-        user_name: pubg_clan.username,
+        user_name: pubg_clan.user_name,
         password: pubg_clan.password,
         email: pubg_clan.email,
-        clan_name: pubg_clan.clanname,
-        ingame_name: pubg_clan.ingamename,
+        clan_name: pubg_clan.clan_name,
+        ingame_name: pubg_clan.ingame_name,
         role: pubg_clan.role,
       }),
     };
@@ -77,7 +77,7 @@ const Pubg_clanEdit = () => {
 
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setEmployee((prev) => {
+    setPubg_clan((prev) => {
       return { ...prev, [name]: value };
     });
   };
@@ -93,8 +93,8 @@ const Pubg_clanEdit = () => {
           <label>Username</label>
           <input
             type="text"
-            name="username"
-            value={pubg_clan.username}
+            name="user_name"
+            value={pubg_clan.user_name}
             onChange={handleChange}
           />
         </p>
@@ -120,8 +120,8 @@ const Pubg_clanEdit = () => {
           <label>Clan Name</label>
           <input
             type="text"
-            name="clanname"
-            value={pubg_clan.clanname}
+            name="clann_ame"
+            value={pubg_clan.clan_name}
             onChange={handleChange}
           />
         </p>
@@ -129,8 +129,8 @@ const Pubg_clanEdit = () => {
           <label>Ingame Name</label>
           <input
             type="text"
-            name="ingamename"
-            value={pubg_clan.ingamename}
+            name="ingame_name"
+            value={pubg_clan.ingame_name}
             onChange={handleChange}
           />
         </p>

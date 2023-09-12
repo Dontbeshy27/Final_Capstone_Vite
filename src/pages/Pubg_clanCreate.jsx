@@ -4,11 +4,11 @@ import { useAuth } from "../contexts/AuthContext";
 
 const Pubg_clanCreate = () => {
     const [pubg_clan, setPubg_clan] = useState ({
-    userName: "",
+    user_name: "",
     password: "",
     email: "",
-    clanName: "",
-    ingameName: "",
+    clan_name: "",
+    ingame_name: "",
     role: "",
   });
   const { token } = useAuth();
@@ -26,11 +26,11 @@ const Pubg_clanCreate = () => {
       },
 
       body: JSON.stringify({
-        user_name: pubg_clan.username,
+        user_name: pubg_clan.user_name,
         password: pubg_clan.password,
         email: pubg_clan.email,
-        clan_name: pubg_clan.clanname,
-        ingame_name: pubg_clan.ingamename,
+        clan_name: pubg_clan.clan_name,
+        ingame_name: pubg_clan.ingame_name,
         role: pubg_clan.role,
       }),
     };
@@ -39,7 +39,7 @@ const Pubg_clanCreate = () => {
       .then((response) => response.json())
       .then((json) => {
         console.log(json);
-        navigate(`/pubg_clans/${json.employee.id}`);
+        navigate(`/pubg_clans/${json.pubg_clan.id}`);
       })
       .catch((err) => {
         console.log(err);
@@ -61,8 +61,8 @@ const Pubg_clanCreate = () => {
           <label>Username</label>
           <input
             type="text"
-            name="username"
-            value={pubg_clan.username}
+            name="user_name"
+            value={pubg_clan.user_name}
             onChange={handleChange}
           />
         </p>
@@ -88,8 +88,8 @@ const Pubg_clanCreate = () => {
           <label>Clan Name</label>
           <input
             type="text"
-            name="clanname"
-            value={pubg_clan.clanname}
+            name="clan_name"
+            value={pubg_clan.clan_name}
             onChange={handleChange}
           />
         </p>
@@ -97,8 +97,8 @@ const Pubg_clanCreate = () => {
           <label>Ingame Name</label>
           <input
             type="text"
-            name="ingamename"
-            value={pubg_clan.ingamename}
+            name="ingame_name"
+            value={pubg_clan.ingame_name}
             onChange={handleChange}
           />
         </p>

@@ -5,11 +5,11 @@ import { useAuth } from "../contexts/AuthContext";
 const Pubg_clanView = () => {
   const { id } = useParams();
   const [pubg_clan, setPubg_clan] = useState ({
-    userName: "",
+    user_name: "",
     password: "",
     email: "",
-    clanName: "",
-    ingameName: "",
+    clan_name: "",
+    ingame_name: "",  
     role: "",
   });
   const [loading, setLoading] = useState(false);
@@ -32,7 +32,7 @@ const Pubg_clanView = () => {
     fetch(url, requestOptions)
       .then((response) => response.json())
       .then((json) => {
-        setEmployee(json);
+        setPubg_clan(json);
         setLoading(false);
       })
       .catch((err) => console.log(err));
@@ -70,7 +70,7 @@ const Pubg_clanView = () => {
         <>
           <p>
             <label>
-            User Name <strong>{pubg_clan.userName}</strong>
+            UserName <strong>{pubg_clan.user_name}</strong>
             </label>
           </p>
           <p>
@@ -85,17 +85,17 @@ const Pubg_clanView = () => {
           </p>
           <p>
             <label>
-            Clan Name <strong>{pubg_clan.clanName}</strong>
+            Clan Name <strong>{pubg_clan.clan_name}</strong>
             </label>
           </p>
           <p>
             <label>
-            Ingame Name <strong>{pubg_clan.ingameName}</strong>
+            Ingame Name <strong>{pubg_clan.ingame_name}</strong>
             </label>
           </p>
           <p>
             <label>
-              Role<strong>{pubg_clan.role}</strong>
+              Role <strong>{pubg_clan.role}</strong>
             </label>
           </p>
 

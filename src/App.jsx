@@ -1,6 +1,6 @@
 import Pubg_clanCreate from "./pages/Pubg_clanCreate";
 import Pubg_clanEdit from "./pages/Pubg_clanEdit";
-import Pubg_clanList from "./pages/Pubg_clanlist";
+import Pubg_clanList from "./pages/Pubg_clanList";
 import Pubg_clanView from "./pages/Pubg_clanView";
 import Login2 from "./pages/Login2";
 import Logout2 from "./pages/Logout2";
@@ -14,7 +14,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
 import NavbarComponent from "./components/Navbarcomponent";
 
-
+import Calendar from "./components/calendar";
 import Fullcalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
@@ -23,7 +23,11 @@ import interactionPlugin from "@fullcalendar/interaction";
 
 function App() {
   return (
+    
+    
+    
     <>
+
 
       <NavbarComponent />
       <Container>
@@ -47,7 +51,9 @@ function App() {
           </Routes>
         </BrowserRouter>
       </Container>
-
+      <div className="App">
+              <Calendar />  
+              </div>
     </>
   );
 }

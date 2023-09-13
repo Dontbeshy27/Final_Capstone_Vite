@@ -45,7 +45,7 @@ const Pubg_clanList = () => {
       ) : (
         <>
           <p>
-            <Link to="/Pubg_clans/create">Create New Pubg_clan</Link>
+            <Link to="/Pubg_clans/create">Create New PUBG CLAN</Link>
           </p>
 
           <Table striped bordered hover>

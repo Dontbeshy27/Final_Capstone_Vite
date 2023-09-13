@@ -1,0 +1,123 @@
+NAVBARCOMPONENT.JSX import React from "react";
+import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
+import { useAuth } from "../contexts/AuthContext";
+
+const NavbarComponent = () => {
+  const { isAuthenticated } = useAuth();
+  return (
+    <>
+      <Navbar bg="primary" data-bs-theme="dark" expand="lg" className="mb-3">
+        <Container>
+          <Navbar.Brand href="#home">ALL PUBG CLAN DETAILS</Navbar.Brand>
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
+          <Navbar.Collapse id="basic-navbar-nav">
+            <Nav className="me-auto">
+              <Nav.Link href="calendar.jsx">index</Nav.Link>
+              <Nav.Link href="index2.html">Link</Nav.Link>
+              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
+                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.2">
+                  Another action
+                </NavDropdown.Item>
+                <NavDropdown.Item href="#action/3.3">
+                  Something
+                </NavDropdown.Item>
+                <NavDropdown.Divider />
+                <NavDropdown.Item href="#action/3.4">
+                  Separated link
+                </NavDropdown.Item>
+              </NavDropdown>
+            </Nav>
+          </Navbar.Collapse>
+          {isAuthenticated && (
+            <Navbar.Collapse className="justify-content-end">
+              <Nav>
+                <Nav.Link href="/logout2">Log Out</Nav.Link>
+              </Nav>
+            </Navbar.Collapse>
+          )}
+        </Container>
+      </Navbar>
+    </>
+  );
+};
+
+export default NavbarComponent;
+
+
+
+APP.JSX import NavbarComponent from "./components/NavbarComponent";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+APP.JSX
+
+import Pubg_clanCreate from "./pages/Pubg_clanCreate";
+import Pubg_clanEdit from "./pages/Pubg_clanEdit";
+import Pubg_clanList from "./pages/Pubg_clanlist";
+import Pubg_clanView from "./pages/Pubg_clanView";
+import Login2 from "./pages/Login2";
+import Logout2 from "./pages/Logout2";
+
+
+import NotFoundPageComponent from "./components/NotFoundPageComponent";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { AuthProvider } from "./contexts/AuthContext";
+import SecureRoute from "./SecureRoute";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Container } from "react-bootstrap";
+import NavbarComponent from "./components/NavbarComponent";
+
+import Calendar from "./components/calendar";
+
+
+function App() {
+  return (
+    <>
+
+      <NavbarComponent />
+      <Container>
+        <BrowserRouter>
+          <Routes>
+            <Route element={<SecureRoute />}>
+              <Route path="/" element={<Pubg_clanList />}></Route>
+              <Route path="/pubg_clans/:id" element={<Pubg_clanView />}></Route>
+              <Route path="*" element={<NotFoundPageComponent />}></Route>
+              <Route
+                path="/Pubg_clans/create"
+                element={<Pubg_clanCreate />}
+              ></Route>
+              <Route
+                path="/pubg_clans/edit/:id"
+                element={<Pubg_clanEdit />}
+              ></Route>
+              <Route path="/logout2" element={<Logout2 />}></Route>
+            </Route>
+            <Route path="/login2" element={<Login2 />}></Route>
+          </Routes>
+        </BrowserRouter>
+      </Container>
+     
+      <div className="App">
+              <Calendar />  
+              </div>
+    </>
+  );
+}
+
+export default App;

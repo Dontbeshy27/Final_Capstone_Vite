@@ -11,10 +11,14 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import SecureRoute from "./SecureRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";  
+import { Container } from "react-bootstrap";
 import NavbarComponent from "./components/Navbarcomponent";
 
-import Calendar from "./components/calendar";
+
+import Fullcalendar from "@fullcalendar/react";
+import dayGridPlugin from "@fullcalendar/daygrid";
+import timeGridPlugin from "@fullcalendar/timegrid";
+import interactionPlugin from "@fullcalendar/interaction";
 
 
 function App() {
@@ -22,6 +26,7 @@ function App() {
     <>
 
       <NavbarComponent />
+      <Container>
         <BrowserRouter>
           <Routes>
             <Route element={<SecureRoute />}>
@@ -41,11 +46,8 @@ function App() {
             <Route path="/login2" element={<Login2 />}></Route>
           </Routes>
         </BrowserRouter>
+      </Container>
 
-     
-      <div className="App">
-              <Calendar />  
-              </div>
     </>
   );
 }

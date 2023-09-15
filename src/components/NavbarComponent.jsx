@@ -1,7 +1,9 @@
 import React from "react";
+import { Link } from 'react-router-dom'; 
 import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
-
+import { ShoppingCart } from "phosphor-react";
+import { Shop } from "react-bootstrap-icons";
 const NavbarComponent = () => {
   const { isAuthenticated } = useAuth();
   return (
@@ -16,9 +18,7 @@ const NavbarComponent = () => {
               <Nav.Link href="/calendar">CALENDAR</Nav.Link>
               <NavDropdown title="MORE" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/">PUBG CLAN LIST</NavDropdown.Item>
-                <NavDropdown.Item href="/cart">
-                  CART
-                </NavDropdown.Item>
+                
                 <NavDropdown.Item href="/footer">
                   ABOUT US
                 </NavDropdown.Item>
@@ -32,6 +32,9 @@ const NavbarComponent = () => {
           {isAuthenticated && (
             <Navbar.Collapse className="justify-content-end">
               <Nav>
+              
+              <Link to="pages/shop/shop "><Shop size={32} /></Link>
+              <Link to="/pages/cart/cart"><ShoppingCart size={32} /></Link>
                 <Nav.Link href="/logout2">Log Out</Nav.Link>
               </Nav>
             </Navbar.Collapse>

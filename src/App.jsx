@@ -4,7 +4,7 @@ import Pubg_clanList from "./pages/Pubg_clanList";
 import Pubg_clanView from "./pages/Pubg_clanView";
 import Login2 from "./pages/Login2";
 import Logout2 from "./pages/Logout2";
-
+import AboutUs from "./pages/about_us";
 
 import NotFoundPageComponent from "./components/NotFoundPageComponent";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
@@ -52,7 +52,7 @@ function App() {
             </Route>
             <Route path="/login2" element={<Login2 />}></Route>
             <Route path="/calendar" element={<Calendar />} ></Route>
-            {/* <Route path="/about_us" element={<AboutUs />} ></Route> */}
+             <Route path="/pages/about_us" element={<AboutUs />} ></Route> 
             <Route path="/gallery" element={<Gallery />} ></Route>
             <Route path="/pages/shop/shop" element={<Shop />}></Route>
              <Route path="/pages/cart/cart" element={<Cart />}></Route>
@@ -61,7 +61,7 @@ function App() {
         </BrowserRouter>
       </Container>
   </ShopContextProvider>
-      <Footer />
+    
 
     </>
   );

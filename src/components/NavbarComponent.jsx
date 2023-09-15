@@ -19,9 +19,7 @@ const NavbarComponent = () => {
               <NavDropdown title="MORE" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/">PUBG CLAN LIST</NavDropdown.Item>
                 
-                <NavDropdown.Item href="/footer">
-                  ABOUT US
-                </NavDropdown.Item>
+                <NavDropdown.Item href="/pages/about_us">About Us</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">
                   Separated link

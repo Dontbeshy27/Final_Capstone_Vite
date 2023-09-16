@@ -2,7 +2,7 @@
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Footer from "./footer";
-
+import "./gallery.css";
  function Gallery () {
   const images = [
     {
@@ -51,8 +51,8 @@ import Footer from "./footer";
 
   return (
     <div className="App">
-      <h1>THERE CAN ONLY BE ONE WINNER LETS GO</h1>
-      <h2>PUBG EVENTS</h2>
+      <h1 className="center">THERE CAN ONLY BE ONE WINNER LETS GO</h1>
+      <h2 className="center">PUBG EVENTS</h2>
       <ImageGallery
         items={images}
         showPlayButton={true}

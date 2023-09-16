@@ -61,7 +61,11 @@ function App() {
         </BrowserRouter>
       </Container>
   </ShopContextProvider>
+<<<<<<< HEAD
 
+=======
+      <Footer />
+>>>>>>> 3cfd25e7d6e1f3609b70b121317b80d30b981888
 
     </>
   );

@@ -1,6 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import "./Pubg_clanCreate.css";
+
+
 
 const Pubg_clanCreate = () => {
     const [pubg_clan, setPubg_clan] = useState ({

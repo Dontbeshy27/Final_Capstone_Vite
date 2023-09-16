@@ -8,19 +8,19 @@ const NavbarComponent = () => {
     <>
       <Navbar bg="primary" data-bs-theme="dark" expand="lg" className="mb-3">
         <Container>
-          <Navbar.Brand href="#home">ALL PUBG CLAN DETAILS</Navbar.Brand>
+          <Navbar.Brand href="/">HOME</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Nav.Link href="calendar.jsx">index</Nav.Link>
-              <Nav.Link href="index2.html">Link</Nav.Link>
-              <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.2">
-                  Another action
+              <Nav.Link href="/gallery">GALLERY</Nav.Link>
+              <Nav.Link href="/calendar">CALENDAR</Nav.Link>
+              <NavDropdown title="MORE" id="basic-nav-dropdown">
+                <NavDropdown.Item href="/">PUBG CLAN LIST</NavDropdown.Item>
+                <NavDropdown.Item href="/cart">
+                  CART
                 </NavDropdown.Item>
-                <NavDropdown.Item href="#action/3.3">
-                  Something
+                <NavDropdown.Item href="/footer">
+                  ABOUT US
                 </NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="#action/3.4">

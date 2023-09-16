@@ -30,7 +30,7 @@ const Login2 = () => {
       let data = await fetchResponse.json();
       setToken(data.token);
       setIsAuthenticated(true);
-      navigate("/");
+      navigate("/gallery");
     } else {
       alert("Invalid Credential");
     }

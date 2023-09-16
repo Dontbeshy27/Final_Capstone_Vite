@@ -12,22 +12,23 @@ import { AuthProvider } from "./contexts/AuthContext";
 import SecureRoute from "./SecureRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
-import NavbarComponent from "./components/Navbarcomponent";
+import NavbarComponent from "./components/NavBarComponent";
 
 import Calendar from "./components/calendar";
-import Fullcalendar from "@fullcalendar/react";
-import dayGridPlugin from "@fullcalendar/daygrid";
-import timeGridPlugin from "@fullcalendar/timegrid";
-import interactionPlugin from "@fullcalendar/interaction";
+import Gallery from "./components/gallery";
+import Footer from "./components/footer";
+
+
+import { Shop } from "./pages/shop/shop";
+import { Contact } from "./pages/contact";
+import { Cart } from "./pages/cart/cart";
+
 
 
 function App() {
-  return (
-    
-    
+  return  (
     
     <>
-
 
       <NavbarComponent />
       <Container>
@@ -48,12 +49,16 @@ function App() {
               <Route path="/logout2" element={<Logout2 />}></Route>
             </Route>
             <Route path="/login2" element={<Login2 />}></Route>
+            <Route path="/calendar" element={<Calendar />} ></Route>
+            <Route path="/gallery" element={<Gallery />} ></Route>
+            <Route path="/shop" element={<Shop />} ></Route>
+            <Route path="/contact" element={<Contact />} ></Route>
+            <Route path="/cart" element={<Cart />} ></Route>
+            <Route path="/shop-context" element={<getDefaultCart />} ></Route>
           </Routes>
         </BrowserRouter>
       </Container>
-      <div className="App">
-              <Calendar />  
-              </div>
+      <Footer />
     </>
   );
 }

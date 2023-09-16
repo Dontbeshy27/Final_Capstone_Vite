@@ -12,7 +12,8 @@ import { AuthProvider } from "./contexts/AuthContext";
 import SecureRoute from "./SecureRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Container } from "react-bootstrap";
-import NavbarComponent from "./components/NavBarComponent";
+import NavbarComponent from "./components/NavbarComponent";
+import { ShopContextProvider } from "./contexts/shop-context";
 
 import Calendar from "./components/calendar";
 import Gallery from "./components/gallery";
@@ -30,9 +31,10 @@ function App() {
     
     <>
 
-      <NavbarComponent />
+<ShopContextProvider>
       <Container>
         <BrowserRouter>
+        <NavbarComponent />
           <Routes>
             <Route element={<SecureRoute />}>
               <Route path="/" element={<Pubg_clanList />}></Route>
@@ -50,15 +52,17 @@ function App() {
             </Route>
             <Route path="/login2" element={<Login2 />}></Route>
             <Route path="/calendar" element={<Calendar />} ></Route>
+            {/* <Route path="/about_us" element={<AboutUs />} ></Route> */}
             <Route path="/gallery" element={<Gallery />} ></Route>
-            <Route path="/shop" element={<Shop />} ></Route>
-            <Route path="/contact" element={<Contact />} ></Route>
-            <Route path="/cart" element={<Cart />} ></Route>
+            <Route path="/pages/shop/shop" element={<Shop />}></Route>
+             <Route path="/pages/cart/cart" element={<Cart />}></Route>
             <Route path="/shop-context" element={<getDefaultCart />} ></Route>
           </Routes>
         </BrowserRouter>
       </Container>
-      <Footer />
+  </ShopContextProvider>
+
+
     </>
   );
 }

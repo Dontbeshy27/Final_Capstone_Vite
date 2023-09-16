@@ -3,6 +3,7 @@ import Fullcalendar from "@fullcalendar/react";
 import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
+import Footer from "./footer";
 
 function Calendar() {
   return (
@@ -16,9 +17,10 @@ function Calendar() {
           end: "dayGridMonth,timeGridWeek,timeGridDay", // will normally be on the right. if RTL, will be on the left
         }}
         height={"90vh"}
-      />
+     
+     />
 
-
+    <Footer />
     </div>
   );
 }

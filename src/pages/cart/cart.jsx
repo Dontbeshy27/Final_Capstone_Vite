@@ -31,7 +31,7 @@ export function Cart ()  {
           <button
           onClick={() => {
             checkout();
-            window.alert("slideshow is now playing!");
+            window.alert("You buy the newest keychain congratulations!");
           }}
           >
             {" "}

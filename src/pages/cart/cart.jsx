@@ -29,10 +29,10 @@ export function Cart ()  {
           <p> Subtotal: ${totalAmount} </p>
           <button onClick={() => navigate("/pages/shop/shop")}> Continue Shopping </button>
           <button
-            onClick={() => {
-              checkout();
-              navigate("/checkout");
-            }}
+          onClick={() => {
+            checkout();
+            window.alert("slideshow is now playing!");
+          }}
           >
             {" "}
             Checkout{" "}

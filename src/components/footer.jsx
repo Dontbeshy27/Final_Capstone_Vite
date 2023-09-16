@@ -24,14 +24,7 @@ function Footer() {
             </ui>
           </div>
           {/* Column3 */}
-          <div className="col">
-            <h4>WELL ANOTHER COLUMN</h4>
-            <ui className="list-unstyled">
-              <li>DANK MEMES</li>
-              <li>OTHER STUFF</li>
-              <li>GUD STUFF</li>
-            </ui>
-          </div>
+
         </div>
         <hr />
         <div className="row">

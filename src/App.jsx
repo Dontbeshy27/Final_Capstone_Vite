@@ -4,24 +4,22 @@ import Pubg_clanList from "./pages/Pubg_clanList";
 import Pubg_clanView from "./pages/Pubg_clanView";
 import Login2 from "./pages/Login2";
 import Logout2 from "./pages/Logout2";
-
+import AboutUs from "./pages/about_us";
 
 import NotFoundPageComponent from "./components/NotFoundPageComponent";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
 import SecureRoute from "./SecureRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
-import { Container } from "react-bootstrap";
+
 import NavbarComponent from "./components/NavbarComponent";
 import { ShopContextProvider } from "./contexts/shop-context";
 
 import Calendar from "./components/calendar";
 import Gallery from "./components/gallery";
-import Footer from "./components/footer";
 
 
 import { Shop } from "./pages/shop/shop";
-import { Contact } from "./pages/contact";
 import { Cart } from "./pages/cart/cart";
 
 
@@ -32,7 +30,7 @@ function App() {
     <>
 
 <ShopContextProvider>
-      <Container>
+
         <BrowserRouter>
         <NavbarComponent />
           <Routes>
@@ -52,20 +50,16 @@ function App() {
             </Route>
             <Route path="/login2" element={<Login2 />}></Route>
             <Route path="/calendar" element={<Calendar />} ></Route>
-            {/* <Route path="/about_us" element={<AboutUs />} ></Route> */}
+             <Route path="/pages/about_us" element={<AboutUs />} ></Route> 
             <Route path="/gallery" element={<Gallery />} ></Route>
             <Route path="/pages/shop/shop" element={<Shop />}></Route>
              <Route path="/pages/cart/cart" element={<Cart />}></Route>
             <Route path="/shop-context" element={<getDefaultCart />} ></Route>
           </Routes>
         </BrowserRouter>
-      </Container>
-  </ShopContextProvider>
-<<<<<<< HEAD
 
-=======
-      <Footer />
->>>>>>> 3cfd25e7d6e1f3609b70b121317b80d30b981888
+  </ShopContextProvider>
+    
 
     </>
   );

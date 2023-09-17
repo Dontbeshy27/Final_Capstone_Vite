@@ -21,6 +21,7 @@ import Gallery from "./components/gallery";
 
 import { Shop } from "./pages/shop/shop";
 import { Cart } from "./pages/cart/cart";
+import Home from "./components/Home";
 
 
 
@@ -28,6 +29,8 @@ function App() {
   return  (
     
     <>
+
+
 
 <ShopContextProvider>
 
@@ -55,6 +58,7 @@ function App() {
             <Route path="/pages/shop/shop" element={<Shop />}></Route>
              <Route path="/pages/cart/cart" element={<Cart />}></Route>
             <Route path="/shop-context" element={<getDefaultCart />} ></Route>
+            <Route path="/home" element={<Home />} ></Route>
           </Routes>
         </BrowserRouter>
 

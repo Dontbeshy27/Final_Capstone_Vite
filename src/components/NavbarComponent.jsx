@@ -20,10 +20,6 @@ const NavbarComponent = () => {
                 <NavDropdown.Item href="/">PUBG CLAN LIST</NavDropdown.Item>
                 
                 <NavDropdown.Item href="/pages/about_us">About Us</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

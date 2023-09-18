@@ -12,6 +12,7 @@ import { AuthProvider } from "./contexts/AuthContext";
 import SecureRoute from "./SecureRoute";
 import "bootstrap/dist/css/bootstrap.min.css";
 
+
 import NavbarComponent from "./components/NavbarComponent";
 import { ShopContextProvider } from "./contexts/shop-context";
 
@@ -22,6 +23,8 @@ import Gallery from "./components/gallery";
 import { Shop } from "./pages/shop/shop";
 import { Cart } from "./pages/cart/cart";
 import Home from "./components/Home";
+
+
 
 
 

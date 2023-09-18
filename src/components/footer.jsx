@@ -21,8 +21,6 @@ function Footer() {
               <li>SHAUN</li>
             </ui>
           </div>
-          {/* Column3 */}
-
         </div>
         <hr />
         <div className="row">

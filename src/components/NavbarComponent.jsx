@@ -4,6 +4,9 @@ import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { ShoppingCart } from "phosphor-react";
 import { Shop } from "react-bootstrap-icons";
+import "./navbar.css";
+
+
 const NavbarComponent = () => {
   const { isAuthenticated } = useAuth();
   return (

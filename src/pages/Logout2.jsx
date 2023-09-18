@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-// import "./about_US.css";
+
 import videoBg from '../assets/videoBg.mp4'
 const Logout2 = () => {
   const { token, setToken, setIsAuthenticated } = useAuth();

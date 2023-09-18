@@ -6,7 +6,7 @@ import "./shop.css";
 
 export function Shop () {
   return (
-    <div className="shop">
+    <div className="shop text-white">
     
       <div className="shopTitle">
         <h1>Pubg Clan Shop</h1>

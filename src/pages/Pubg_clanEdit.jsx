@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-import videoBg from '../assets/videoBg.mp4'
+
 const Pubg_clanEdit = () => {
   const { id } = useParams();
   const [pubg_clan, setPubg_clan] = useState ({
@@ -150,7 +150,7 @@ const Pubg_clanEdit = () => {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary">Update</button>
+         
         </form>
       )}
       <video id="background-video" src={videoBg} autoPlay loop muted />

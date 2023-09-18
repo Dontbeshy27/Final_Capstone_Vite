@@ -7,7 +7,7 @@ import Footer from "./footer";
 
 function Calendar() {
   return (
-    <div>
+    <div className="text-white">
       <Fullcalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView={"dayGridMonth"}

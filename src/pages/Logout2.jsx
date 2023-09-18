@@ -28,7 +28,7 @@ const Logout2 = () => {
   return (
     <>
       <div className="container mt-5 text-center">
-        <h3 className="text-success">You have logged out successfully</h3>
+        <h3 className="text-white">You have logged out successfully</h3>
         <Link to="/login2" className="btn btn-primary">Login</Link>
       </div>
 

@@ -7,7 +7,7 @@ export const CartItem = (props) => {
     useContext(ShopContext);
 
   return (
-    <div className="cartItem">
+    <div className="cartItem text-white">
       <img src={productImage} />
       <div className="description">
         <p>

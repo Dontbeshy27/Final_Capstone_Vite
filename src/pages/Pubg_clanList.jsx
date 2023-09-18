@@ -3,7 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { Button, Table } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
-
+import "./Pubg_clanList.css";
+import videoBg from '../assets/videoBg.mp4'
 const Pubg_clanList = () => {
   const [Pubg_clans, setPubg_clan] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -39,16 +40,17 @@ const Pubg_clanList = () => {
 
   return (
     <>
-      <h2>PUBG CLAN</h2>
+    
+      <h2 className="text-center">PUBG CLAN</h2>
       {loading ? (
-        <h3>Loading...</h3>
+        <h3 className="text-center">Loading...</h3>
       ) : (
         <>
-          <p>
+          <p className="text-center">
             <Link to="/Pubg_clans/create">Create New PUBG CLAN</Link>
           </p>
 
-          <Table striped bordered hover>
+          <Table className="table"striped bordered hover>
             <thead>
               <tr>
                 <th>User Name</th>
@@ -80,6 +82,7 @@ const Pubg_clanList = () => {
               ))}
             </tbody>
           </Table>
+          <video id="background-video" src={videoBg} autoPlay loop muted />
         </>
       )}
     </>

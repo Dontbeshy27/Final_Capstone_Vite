@@ -57,7 +57,7 @@ import "./gallery.css";
         items={images}
         showPlayButton={true}
         showFullscreenButton={true}
-        slideInterval={1000}
+        slideInterval={100}
         slideOnThumbnailOver={true}
         showIndex={true}
         onPlay={() => {

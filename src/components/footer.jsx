@@ -10,9 +10,7 @@ function Footer() {
           <div className="col">
             <h4>PUBGM PH INC</h4>
             <h1 className="list-unstyled">
-              <li>342-420-6969</li>
               <li>Manila, Philippines</li>
-              <li>BGC</li>
             </h1>
           </div>
           {/* Column2 */}
@@ -23,8 +21,6 @@ function Footer() {
               <li>SHAUN</li>
             </ui>
           </div>
-          {/* Column3 */}
-
         </div>
         <hr />
         <div className="row">

@@ -17,9 +17,7 @@ function Calendar() {
           end: "dayGridMonth,timeGridWeek,timeGridDay", // will normally be on the right. if RTL, will be on the left
         }}
         height={"90vh"}
-     
      />
-
     <Footer />
     </div>
   );

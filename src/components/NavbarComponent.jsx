@@ -4,13 +4,16 @@ import { Container, Nav, NavDropdown, Navbar } from "react-bootstrap";
 import { useAuth } from "../contexts/AuthContext";
 import { ShoppingCart } from "phosphor-react";
 import { Shop } from "react-bootstrap-icons";
+import "./navbar.css";
+
+
 const NavbarComponent = () => {
   const { isAuthenticated } = useAuth();
   return (
     <>
       <Navbar bg="primary" data-bs-theme="dark" expand="lg" className="mb-3">
         <Container>
-          <Navbar.Brand href="/">HOME</Navbar.Brand>
+          <Navbar.Brand href="/home">HOME</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -20,10 +23,6 @@ const NavbarComponent = () => {
                 <NavDropdown.Item href="/">PUBG CLAN LIST</NavDropdown.Item>
                 
                 <NavDropdown.Item href="/pages/about_us">About Us</NavDropdown.Item>
-                <NavDropdown.Divider />
-                <NavDropdown.Item href="#action/3.4">
-                  Separated link
-                </NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

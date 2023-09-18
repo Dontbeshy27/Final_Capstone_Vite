@@ -31,13 +31,13 @@ const Login2 = () => {
       setToken(data.token);
       setIsAuthenticated(true);
       navigate("/home");
-    } else {
+    } else {  
       alert("Invalid Credential");
     }
   };
 
   return (
-    <>
+<>
       <h2 className="text-center ">Login Page</h2>
       <Form className="card"onSubmit={handleLogin}>
         <Form.Group className="mb-3 ">

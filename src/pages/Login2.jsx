@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { Button, Form } from "react-bootstrap";
-import videoBg from '../assets/videoBg.mp4'
+
 const Login2 = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -60,7 +60,7 @@ const Login2 = () => {
           Login
         </Button>
       </Form>
-      <video id="background-video" src={videoBg} autoPlay loop muted />
+      
     </>
   );
 };

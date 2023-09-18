@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-
-import videoBg from '../assets/videoBg.mp4'
+// import "./about_US.css";
 const Logout2 = () => {
   const { token, setToken, setIsAuthenticated } = useAuth();
 
@@ -32,7 +31,7 @@ const Logout2 = () => {
         <h3 className="text-success">You have logged out successfully</h3>
         <Link to="/login2" className="btn btn-primary">Login</Link>
       </div>
-      <video id="background-video" src={videoBg} autoPlay loop muted />
+
     </>
   );
 };

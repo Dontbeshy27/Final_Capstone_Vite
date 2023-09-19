@@ -149,6 +149,7 @@ const Pubg_clanEdit = () => {
               onChange={handleChange}
             />
           </div>
+          <button type="submit" className="btn btn-primary">Update</button>
         </form>
       )}
     </>

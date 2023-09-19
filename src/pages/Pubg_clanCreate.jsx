@@ -58,63 +58,69 @@ const Pubg_clanCreate = () => {
   return (
     <>
       <h1>Clan Create</h1>
-      <form onSubmit={handleSubmit}>
-        <p>
-          <label>Username</label>
-          <input
-            type="text"
-            name="user_name"
-            value={pubg_clan.user_name}
-            onChange={handleChange}
-          />
-        </p>
-        <p>
-          <label>Password</label>
-          <input
-            type="text"
-            name="password"
-            value={pubg_clan.password}
-            onChange={handleChange}
-          />
-        </p>
-        <p>
-          <label>Email</label>
-          <input
-            type="email"
-            name="email"
-            value={pubg_clan.email}
-            onChange={handleChange}
-          />
-        </p>
-        <p>
-          <label>Clan Name</label>
-          <input
-            type="text"
-            name="clan_name"
-            value={pubg_clan.clan_name}
-            onChange={handleChange}
-          />
-        </p>
-        <p>
-          <label>Ingame Name</label>
-          <input
-            type="text"
-            name="ingame_name"
-            value={pubg_clan.ingame_name}
-            onChange={handleChange}
-          />
-        </p>
-        <p>
-          <label>Role</label>
-          <input
-            type="text"
-            name="role"
-            value={pubg_clan.role}
-            onChange={handleChange}
-          />
-        </p>
-        <input type="submit" value="Save" />
-      </form>
+       <form className="card" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label className="text-light" >Username</label>
+            <input
+              type="text"
+              name="user_name"
+              className="form-control"
+              value={pubg_clan.user_name}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label className="text-light">Password</label>
+            <input
+              type="text"
+              name="password"
+              className="form-control"
+              value={pubg_clan.password}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label className="text-light">Email</label>
+            <input
+              type="email"
+              name="email"
+              className="form-control"
+              value={pubg_clan.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label className="text-light">Clan Name</label>
+            <input
+              type="text"
+              name="clan_name"
+              className="form-control"
+              value={pubg_clan.clan_name}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label className="text-light">Ingame Name</label>
+            <input
+              type="text"
+              name="ingame_name"
+              className="form-control"
+              value={pubg_clan.ingame_name}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="form-group">
+            <label className="text-light">Role</label>
+            <input
+              type="text"
+              name="role"
+              className="form-control"
+              value={pubg_clan.role}
+              onChange={handleChange}
+            />
+          </div>
+          <button type="save" className="btn btn-primary" value="save">Update</button>
+        </form>
     </>
   );
 };

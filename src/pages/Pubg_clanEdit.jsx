@@ -12,6 +12,11 @@ const Pubg_clanEdit = () => {
     ingame_name: "",
     role: "",
   });
+  
+
+  const handleBackClick = () => {
+    navigate(-1); 
+  };
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { token } = useAuth();
@@ -150,6 +155,13 @@ const Pubg_clanEdit = () => {
             />
           </div>
           <button type="submit" className="btn btn-primary">Update</button>
+          <button
+            type="button" 
+            className="btn btn-secondary" 
+            onClick={handleBackClick} 
+          >
+            Back
+          </button>
         </form>
       )}
     </>

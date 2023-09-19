@@ -37,19 +37,19 @@ const Login2 = () => {
   };
 
   return (
-    <>
-      <h2>Login Page</h2>
-      <Form onSubmit={handleLogin}>
-        <Form.Group className="mb-3 col-md-4">
-          <Form.Label>Email </Form.Label>
+<>
+      <h2 className="text-center ">Login Page</h2>
+      <Form className="card"onSubmit={handleLogin}>
+        <Form.Group className="mb-3 ">
+          <Form.Label className="text-light">Email </Form.Label>
           <Form.Control
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3 col-md-4">
-          <Form.Label>Password </Form.Label>
+        <Form.Group className="mb-3 ">
+          <Form.Label className="text-light">Password </Form.Label>
           <Form.Control
             type="password"
             value={password}
@@ -60,7 +60,7 @@ const Login2 = () => {
           Login
         </Button>
       </Form>
-      <video id="background-video" src={videoBg} autoPlay loop muted />
+      
     </>
   );
 };

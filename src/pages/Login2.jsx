@@ -60,6 +60,7 @@ const Login2 = () => {
           Login
         </Button>
       </Form>
+      <video id="background-video" src={videoBg} autoPlay loop muted />
     </>
   );
 };

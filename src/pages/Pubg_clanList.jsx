@@ -4,7 +4,7 @@ import { useAuth } from "../contexts/AuthContext";
 import { Button, Table } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 import "./Pubg_clanList.css";
-import videoBg from '../assets/videoBg.mp4'
+
 const Pubg_clanList = () => {
   const [Pubg_clans, setPubg_clan] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -82,7 +82,7 @@ const Pubg_clanList = () => {
               ))}
             </tbody>
           </Table>
-          <video id="background-video" src={videoBg} autoPlay loop muted />
+          
         </>
       )}
     </>

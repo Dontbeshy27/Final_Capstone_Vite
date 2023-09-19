@@ -3,7 +3,7 @@ import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
 import Footer from "./footer";
 import "./gallery.css";
-import videoBg from '../assets/videoBg.mp4'
+
  function Gallery () {
   const images = [
     {
@@ -53,7 +53,15 @@ import videoBg from '../assets/videoBg.mp4'
   return (
     
     <div className="App">
-       <video id="background-video" src={videoBg} autoPlay loop muted />
+       <video
+        id="background-video"
+        autoPlay
+        loop
+        muted
+        // poster="https://assets.codepen.io/6093409/river.jpg"
+      >
+        <source src="../assets/videoBg.mp4" type="video/mp4" />
+      </video>
       <h1 className="center">THERE CAN ONLY BE ONE WINNER LETS GO</h1>
       <h2 className="center">PUBG EVENTS</h2>
       <ImageGallery

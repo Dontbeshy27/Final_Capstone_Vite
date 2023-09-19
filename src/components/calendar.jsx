@@ -4,11 +4,10 @@ import dayGridPlugin from "@fullcalendar/daygrid";
 import timeGridPlugin from "@fullcalendar/timegrid";
 import interactionPlugin from "@fullcalendar/interaction";
 import Footer from "./footer";
-import videoBg from '../assets/videoBg.mp4'
+
 function Calendar() {
   return (
     <div>
-      <video id="background-video" src={videoBg} autoPlay loop muted />
       <Fullcalendar
         plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
         initialView={"dayGridMonth"}

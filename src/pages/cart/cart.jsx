@@ -3,7 +3,7 @@ import { ShopContext } from "../../contexts/shop-context";
 import { PRODUCTS } from "../../products";
 import { CartItem } from "./cart-item";
 import { useNavigate } from "react-router-dom";
-import videoBg from '../../assets/videoBg.mp4'
+
 import "./cart.css";
 export function Cart ()  {
   const { cartItems, getTotalCartAmount, checkout } = useContext(ShopContext);
@@ -13,7 +13,6 @@ export function Cart ()  {
 
   return (
     <div className="cart">
-      <video id="background-video" src={videoBg} autoPlay loop muted />
       <div>
         <h1>Your Cart Items</h1>
       </div>

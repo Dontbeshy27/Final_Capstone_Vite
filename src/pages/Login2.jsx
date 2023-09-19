@@ -2,7 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { Button, Form } from "react-bootstrap";
-import videoBg from '../assets/videoBg.mp4'
+
 const Login2 = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -31,25 +31,25 @@ const Login2 = () => {
       setToken(data.token);
       setIsAuthenticated(true);
       navigate("/home");
-    } else {
+    } else {  
       alert("Invalid Credential");
     }
   };
 
   return (
     <>
-      <h2 lassName="text-center ">Login Page</h2>
-      <Form className="card"onSubmit={handleLogin}>
-        <Form.Group className="mb-3 ">
-          <Form.Label className="text-light">Email </Form.Label>
+      <h2>Login Page</h2>
+      <Form onSubmit={handleLogin}>
+        <Form.Group className="mb-3 col-md-4">
+          <Form.Label>Email </Form.Label>
           <Form.Control
             type="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
         </Form.Group>
-        <Form.Group className="mb-3 ">
-          <Form.Label className="text-light">Password </Form.Label>
+        <Form.Group className="mb-3 col-md-4">
+          <Form.Label>Password </Form.Label>
           <Form.Control
             type="password"
             value={password}
@@ -60,7 +60,6 @@ const Login2 = () => {
           Login
         </Button>
       </Form>
-      <video id="background-video" src={videoBg} autoPlay loop muted />
     </>
   );
 };

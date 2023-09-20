@@ -9,7 +9,7 @@ export function Shop () {
     <div className="shop text-white">
     
       <div className="shopTitle">
-        <h1>Pubg Clan Shop</h1>
+        <h1>PUBG SHOP</h1>
       </div>
 
       <div className="products">

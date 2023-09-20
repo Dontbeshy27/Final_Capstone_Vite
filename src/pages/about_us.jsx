@@ -12,7 +12,7 @@ const AboutUs = () => {
 
     <section>
     <div className="container flow-content">
-      <h2 className={`section-title ${styles.flick}`}>Our team</h2>
+      <h2 className={`section-title ${styles.flick}`}>OUR TEAM</h2>
       <ul role="list" className="grid">
         {teamMembers.map((member, index) => (
           <li key={index}>

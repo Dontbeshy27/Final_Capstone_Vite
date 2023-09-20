@@ -13,7 +13,7 @@ const NavbarComponent = () => {
     <>
       <Navbar bg="primary" data-bs-theme="dark" expand="lg" className="mb-3">
         <Container>
-          <Navbar.Brand href="/home">HOME</Navbar.Brand>
+          <Navbar.Brand href="/home">PUBG PH</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
@@ -22,7 +22,7 @@ const NavbarComponent = () => {
               <NavDropdown title="MORE" id="basic-nav-dropdown">
                 <NavDropdown.Item href="/">PUBG CLAN LIST</NavDropdown.Item>
                 
-                <NavDropdown.Item href="/pages/about_us">About Us</NavDropdown.Item>
+                <NavDropdown.Item href="/pages/about_us">ABOUT US</NavDropdown.Item>
               </NavDropdown>
             </Nav>
           </Navbar.Collapse>

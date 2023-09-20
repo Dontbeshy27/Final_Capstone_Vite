@@ -62,7 +62,7 @@ import "./gallery.css";
       >
         <source src="../assets/videoBg.mp4" type="video/mp4" />
       </video>
-      <h1 className="center">THERE CAN ONLY BE ONE WINNER LETS GO</h1>
+      <h1 className="center">THERE CAN ONLY BE ONE WINNER, LETS GO</h1>
       <h2 className="center">PUBG EVENTS</h2>
       <ImageGallery
         items={images}

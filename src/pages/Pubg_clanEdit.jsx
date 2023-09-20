@@ -84,7 +84,7 @@ const Pubg_clanEdit = () => {
 
   return (
      <>
-      <h2>Please edit your clan</h2>
+      <h2 className="text-center">Please edit your clan</h2>
       {loading ? (
         <h3>Loading</h3>
       ) : (
@@ -149,11 +149,8 @@ const Pubg_clanEdit = () => {
               onChange={handleChange}
             />
           </div>
-
-         
         </form>
       )}
-      <video id="background-video" src={videoBg} autoPlay loop muted />
     </>
   );
 };

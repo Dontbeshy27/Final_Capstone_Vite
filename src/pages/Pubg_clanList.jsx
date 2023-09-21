@@ -57,9 +57,9 @@ const Pubg_clanList = () => {
                 <th>Password</th>
                 <th>Email</th>
                 <th>Clan Name</th>
-                <th>Ingame Name</th>
+                <th>InGame Name</th>
                 <th>Role</th>
-                <th>Action</th>
+                <th>View</th>
               </tr>
             </thead>
             <tbody>

@@ -58,9 +58,9 @@ import "./gallery.css";
         autoPlay
         loop
         muted
-        // poster="https://assets.codepen.io/6093409/river.jpg"
+     
       >
-        <source src="../assets/videoBg.mp4" type="video/mp4" />
+        <source src="../assets/videoBg.mp4" type="video/mp4" /> 
       </video>
       <h1 className="center">THERE CAN ONLY BE ONE WINNER, LETS GO</h1>
       <h2 className="center">PUBG EVENTS</h2>

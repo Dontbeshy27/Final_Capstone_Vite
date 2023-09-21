@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
-// import "./about_US.css";
+
 const Logout2 = () => {
   const { token, setToken, setIsAuthenticated } = useAuth();
 

@@ -88,8 +88,7 @@ const Pubg_clanEdit = () => {
   };
 
   return (
-     <>
-     
+   <>
       <h2 className="text-center">Please edit your clan</h2>
       {loading ? (
         <h3>Loading</h3>

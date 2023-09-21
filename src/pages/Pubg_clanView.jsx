@@ -114,9 +114,7 @@ const Pubg_clanView = () => {
           </>
         )}
       </div>
-      
     </div>
-    
    </>
   );
 };

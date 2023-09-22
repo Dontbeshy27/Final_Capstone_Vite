@@ -40,7 +40,6 @@ const Pubg_clanList = () => {
 
   return (
     <>
-    
       <h2 className="text-center text-white">PUBG CLANS</h2>
       {loading ? (
         <h3 className="text-center">Loading...</h3>
@@ -51,15 +50,16 @@ const Pubg_clanList = () => {
           </p>
 
           <Table className="table"striped bordered hover>
+           
             <thead>
               <tr>
                 <th>User Name</th>
                 <th>Password</th>
                 <th>Email</th>
                 <th>Clan Name</th>
-                <th>Ingame Name</th>
+                <th>InGame Name</th>
                 <th>Role</th>
-                <th>Action</th>
+                <th>View</th>
               </tr>
             </thead>
             <tbody>
@@ -82,7 +82,6 @@ const Pubg_clanList = () => {
               ))}
             </tbody>
           </Table>
-          
         </>
       )}
     </>

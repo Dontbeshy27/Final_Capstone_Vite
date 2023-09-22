@@ -10,7 +10,6 @@ const Home = () => {
         <video src={videoBg} autoPlay loop muted />
         <Footer />
     </div>
-    
   )
 }
 

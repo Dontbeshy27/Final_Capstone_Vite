@@ -60,7 +60,6 @@ const Login2 = () => {
           Login
         </Button>
       </Form>
-      
     </>
   );
 };

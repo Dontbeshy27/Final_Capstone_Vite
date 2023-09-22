@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 
 
-
 const Pubg_clanCreate = () => {
     const [pubg_clan, setPubg_clan] = useState ({
     user_name: "",
@@ -57,7 +56,7 @@ const Pubg_clanCreate = () => {
 
   return (
     <>
-      <h1 className="text-center">Clan Create</h1>
+      <h1 className="text-center">CREATE YOUR PUBG CLAN INFORMATION</h1>
        <form className="card" onSubmit={handleSubmit}>
           <div className="form-group">
             <label className="text-light" >Username</label>
@@ -118,9 +117,11 @@ const Pubg_clanCreate = () => {
               value={pubg_clan.role}
               onChange={handleChange}
             />
+
           </div>
-          <button type="save" className="btn btn-primary" value="save">Update</button>
+          <button type="save" className="btn btn-primary" value="save">Submit</button>
         </form>
+    
     </>
   );
 };

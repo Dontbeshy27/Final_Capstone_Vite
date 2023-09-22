@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Person1 from "../assets/products/person1.jpg"
+import Person2 from "../assets/products/person2.jpg"
 import styles from './about_us.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { FacebookLogo } from 'phosphor-react';
@@ -76,7 +77,7 @@ const teamMembers = [
   {
     name: "Edward M Pacheco",
     position: "Web Developer/Front-End Engineer",
-    imageSrc: Person1,
+    imageSrc: Person2,
     bio: "Hi, I am Mark, your web developer and a software Engineer.",
     facebookLink: "https://m.me/micronomix",
     linkedinLink: "https://www.linkedin.com/in/mark-renier-mercado-2a6466268",

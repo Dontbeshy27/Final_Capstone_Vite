@@ -6,6 +6,7 @@ import product5 from "./assets/products/5.jpg";
 import product6 from "./assets/products/6.jpg";
 import product7 from "./assets/products/7.webp";
 import product8 from "./assets/products/8.webp";
+import product9 from "./assets/products/9.webp";
 
 export const PRODUCTS = [
   {
@@ -55,6 +56,13 @@ export const PRODUCTS = [
     productName: "keychabdbin",
     price: 40.0,
     productImage: product8,
+  },
+
+  {
+    id: 9,
+    productName: "kaw",
+    price: 21.0,
+    productImage: product9,
   },
 ];
 

@@ -71,7 +71,7 @@
       }
 
 .card__front {
-        padding: 2em 2em 2.5em 2em;
+       
         transition: 
           opacity 250ms ease,
           transform 450ms ease;

@@ -3,21 +3,24 @@ import { PRODUCTS } from "../../products";
 import { Product } from "./product";
 import "./shop.css";
 
-
-export function Shop () {
+export function Shop() {
   return (
-    <div className="shop text-white">
-    
-      <div className="shopTitle">
-        <h1>PUBG SHOP</h1>
+    <div className="container mt-4">
+      <div className="row">
+        <div className="col">
+          <h1 className="text-center text-white">PUBG SHOP</h1>
+        </div>
       </div>
 
-      <div className="products">
-        {PRODUCTS.map((product) => (
-          <Product data={product} />
+      <div className="row">
+        {PRODUCTS.map((product, index) => (
+          <div className="col-md-4 mb-4" key={index}>
+            <Product data={product} />
+          </div>
         ))}
       </div>
     </div>
   );
-};
+}
+
 export default Shop;

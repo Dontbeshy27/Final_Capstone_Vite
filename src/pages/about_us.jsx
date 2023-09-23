@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Person1 from "../assets/products/person1.jpg"
 import Person2 from "../assets/products/person2.jpg"
 import styles from './about_us.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 import { FacebookLogo } from 'phosphor-react';
 import Footer from '../components/footer';
 
@@ -13,7 +13,7 @@ const AboutUs = () => {
 
     <section>
     <div className="container flow-content">
-      <h2 className={`section-title ${styles.flick}`}>OUR TEAM</h2>
+      <h2 className="section-title ">OUR TEAM</h2>
       <ul role="list" className="grid">
         {teamMembers.map((member, index) => (
           <li key={index}>
@@ -69,7 +69,7 @@ const teamMembers = [
   {
     name: "Shaun Daniel Q, Dequilla",
     position: "Web Developer/Front-End Engineer",
-    imageSrc: Person1,
+    imageSrc: Person2,
     bio: "Hi, I am Mark, your web developer and a software Engineer.",
     facebookLink: "https://m.me/micronomix",
     linkedinLink: "https://www.linkedin.com/in/mark-renier-mercado-2a6466268",
@@ -77,7 +77,7 @@ const teamMembers = [
   {
     name: "Edward M Pacheco",
     position: "Web Developer/Front-End Engineer",
-    imageSrc: Person2,
+    imageSrc: Person1,
     bio: "Hi, I am Mark, your web developer and a software Engineer.",
     facebookLink: "https://m.me/micronomix",
     linkedinLink: "https://www.linkedin.com/in/mark-renier-mercado-2a6466268",

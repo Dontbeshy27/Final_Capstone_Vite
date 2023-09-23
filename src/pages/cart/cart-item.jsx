@@ -14,13 +14,13 @@ export const CartItem = (props) => {
           <b>{productName}</b>
         </p>
         <p> Price: ${price}</p>
-        <div className="countHandler">
-          <button onClick={() => removeFromCart(id)}> - </button>
-          <input
+        <div className="countHandler d-flex ">
+          <button className="btn btn-outline-secondary  custom-button"onClick={() => removeFromCart(id)}> - </button>
+          <input className="form-control "
             value={cartItems[id]}
             onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
           />
-          <button onClick={() => addToCart(id)}> + </button>
+          <button className="btn btn-outline-secondary custom-button" onClick={() => addToCart(id)}> + </button>
           
         </div>
       </div>

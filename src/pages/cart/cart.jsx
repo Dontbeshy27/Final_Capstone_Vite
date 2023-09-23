@@ -33,7 +33,7 @@ export function Cart() {
 
       {totalAmount > 0 ? (
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-md-6 text-white">
             <p>Subtotal: ${totalAmount}</p>
           </div>
           <div className="col-md-6">

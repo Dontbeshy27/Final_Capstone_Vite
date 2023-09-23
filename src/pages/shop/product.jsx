@@ -8,9 +8,9 @@ export const Product = (props) => {
   const cartItemCount = cartItems[id];
 
   return (
-    <div className="product text-white">
+    <div className="product text-white ">
       <img src={productImage} />
-      <div className="description">
+      <div className="description ">
         <p>
           <b>{productName}</b>
         </p>

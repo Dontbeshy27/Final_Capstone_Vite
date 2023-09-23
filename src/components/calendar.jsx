@@ -23,7 +23,7 @@ function Calendar() {
     <h1 className="mt-4">October 20 2023: event in moa </h1>
     <h1 className="mt-4">October 27 2023: holiday event  </h1>
     <h1 className="mt-4">November 15 2023: Halloweenfest   </h1>
-     
+    <h1 className="mt-4">December 21 2023: winterfest   </h1>
     <Footer />
     </div>
   );

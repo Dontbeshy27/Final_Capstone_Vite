@@ -7,6 +7,8 @@ const Home = () => {
   return (
     <div className='main'>
         <div className="overlay"></div>
+        <h1>Welcome to Our Capstone!</h1>
+            <p>Created by Shaun and Edward</p>
         <video src={videoBg} autoPlay loop muted />
         <div className="content">
             <h1>Welcome to Our Capstone!</h1>

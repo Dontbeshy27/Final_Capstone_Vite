@@ -4,6 +4,7 @@
    /* background-image: url(https://e1.pxfuel.com/desktop-wallpaper/461/981/desktop-wallpaper-pubg-mobile-1920x1080-pubg-mobile.jpg);  */
 	--text-primary: #fff;
 	--text-secondary: #ccc;
+  
   /* }
   *,
   *::before,
@@ -19,7 +20,7 @@
 	color-scheme: dark; */
   }
   body {
-    font-family: system-ui, sans-serif;
+    font-family:'Times New Roman', Times, serif;
     min-height: 100vh;
     background-color: var(--bg-primary);
     color: var(--text-secondary);

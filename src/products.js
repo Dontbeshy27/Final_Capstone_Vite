@@ -11,7 +11,7 @@ import product9 from "./assets/products/9.webp";
 export const PRODUCTS = [
   {
     id: 1,
-    productName: "Level 3 Backpack Keychain",
+    productName: "Backpack Keychain",
     price: 24.0,
     productImage: product1,
   },
@@ -35,7 +35,7 @@ export const PRODUCTS = [
   },
   {
     id: 5,
-    productName: "Gold M4A1 Keychain",
+    productName: "M4A1 Keychain",
     price: 12.99,
     productImage: product5,
   },
@@ -47,7 +47,7 @@ export const PRODUCTS = [
   },
   {
     id: 7,
-    productName: "Bumblebee AKM Keychain",
+    productName: "AKM Keychain",
     price: 53.0,
     productImage: product7,
   },
@@ -60,7 +60,7 @@ export const PRODUCTS = [
 
   {
     id: 9,
-    productName: "Level 3 Backpack Keychain",
+    productName: "Backpack Keychain",
     price: 21.0,
     productImage: product9,
   },

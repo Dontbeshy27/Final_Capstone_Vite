@@ -8,6 +8,10 @@ const Home = () => {
     <div className='main'>
         <div className="overlay"></div>
         <video src={videoBg} autoPlay loop muted />
+        <div className="content">
+            <h1>Welcome to Our Capstone!</h1>
+            <p>Created by Shaun and Edward</p>
+        </div>        
         <Footer />
     </div>
   )

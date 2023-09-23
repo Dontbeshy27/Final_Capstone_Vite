@@ -1,4 +1,5 @@
 .center {
+    font-family:'Times New Roman', Times, serif;
     font-size: clamp(2rem, 5vw, 3rem);
     text-align: center;
     font-weight: bold;

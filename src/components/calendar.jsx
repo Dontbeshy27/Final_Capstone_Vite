@@ -17,6 +17,7 @@ function Calendar() {
           end: "dayGridMonth,timeGridWeek,timeGridDay", 
         }}
         height={"90vh"}
+        
      />
     <Footer />
     </div>

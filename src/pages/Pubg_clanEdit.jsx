@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import Footer from "../components/footer";
 
 const Pubg_clanEdit = () => {
   const { id } = useParams();
@@ -164,6 +165,7 @@ const Pubg_clanEdit = () => {
           </button>
         </form>
       )}
+     <Footer />
     </>
   );
 };

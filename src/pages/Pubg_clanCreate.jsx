@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
+import Footer from "../components/footer";
 
 
 const Pubg_clanCreate = () => {
@@ -121,7 +122,7 @@ const Pubg_clanCreate = () => {
           </div>
           <button type="save" className="btn btn-primary" value="save">Submit</button>
         </form>
-    
+        <Footer />
     </>
   );
 };

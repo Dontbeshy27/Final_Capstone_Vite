@@ -3,7 +3,9 @@ import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import { Button, Table } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
+import "bootstrap/dist/css/bootstrap.min.css";
 import "./Pubg_clanList.css";
+import Footer from "../components/footer";
 
 const Pubg_clanList = () => {
   const [Pubg_clans, setPubg_clan] = useState([]);
@@ -84,6 +86,7 @@ const Pubg_clanList = () => {
           </Table>
         </>
       )}
+    <Footer />
     </>
   );
 };

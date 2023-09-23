@@ -3,6 +3,7 @@ import { useParams, Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../contexts/AuthContext";
 import "./Pubg_clanView.css";
 import Footer from "../components/footer";
+
 const Pubg_clanView = () => {
   const { id } = useParams();
   const [pubg_clan, setPubg_clan] = useState ({
@@ -115,6 +116,7 @@ const Pubg_clanView = () => {
         )}
       </div>
     </div>
+    <Footer />
    </>
   );
 };

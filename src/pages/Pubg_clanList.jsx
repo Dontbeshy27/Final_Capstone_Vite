@@ -4,6 +4,7 @@ import { useAuth } from "../contexts/AuthContext";
 import { Button, Table } from "react-bootstrap";
 import { Search } from "react-bootstrap-icons";
 import "./Pubg_clanList.css";
+import Footer from "../components/footer";
 
 const Pubg_clanList = () => {
   const [Pubg_clans, setPubg_clan] = useState([]);
@@ -84,6 +85,7 @@ const Pubg_clanList = () => {
           </Table>
         </>
       )}
+    <Footer />
     </>
   );
 };

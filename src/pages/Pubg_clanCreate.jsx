@@ -57,7 +57,7 @@ const Pubg_clanCreate = () => {
 
   return (
     <>
-      <h1 className="text-center">CREATE YOUR PUBG CLAN INFORMATION</h1>
+      <h1 className="text-center text-white">CREATE YOUR PUBG CLAN INFORMATION</h1>
        <form className="card" onSubmit={handleSubmit}>
           <div className="form-group">
             <label className="text-light" >Username</label>

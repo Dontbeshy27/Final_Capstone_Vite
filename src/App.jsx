@@ -24,9 +24,8 @@ import Home from "./components/Home";
 
 function App() {
   return  (
-    
     <>
-
+<AuthProvider>
 <ShopContextProvider>
         <BrowserRouter>
         <NavbarComponent />
@@ -44,7 +43,7 @@ function App() {
                 element={<Pubg_clanEdit />}
               ></Route>
               <Route path="/logout2" element={<Logout2 />}></Route>
-            </Route>
+           
             <Route path="/login2" element={<Login2 />}></Route>
             <Route path="/calendar" element={<Calendar />} ></Route>
              <Route path="/pages/about_us" element={<AboutUs />} ></Route> 
@@ -53,9 +52,11 @@ function App() {
              <Route path="/pages/cart/cart" element={<Cart />}></Route>
             <Route path="/shop-context" element={<getDefaultCart />} ></Route>
             <Route path="/home" element={<Home />} ></Route>
+            </Route>
           </Routes>
         </BrowserRouter>
   </ShopContextProvider>
+  </AuthProvider>
     
     </>
   );

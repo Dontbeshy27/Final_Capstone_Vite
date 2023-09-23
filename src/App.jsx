@@ -24,9 +24,8 @@ import Home from "./components/Home";
 
 function App() {
   return  (
-    
     <>
-
+<AuthProvider>
 <ShopContextProvider>
         <BrowserRouter>
         <NavbarComponent />
@@ -57,7 +56,6 @@ function App() {
           </Routes>
         </BrowserRouter>
   </ShopContextProvider>
- 
     
     </>
   );

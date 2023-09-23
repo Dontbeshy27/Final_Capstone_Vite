@@ -17,6 +17,7 @@ function Calendar() {
           end: "dayGridMonth,timeGridWeek,timeGridDay", 
         }}
         height={"90vh"}
+        
      />
     <h1 className="mt-4">September 13 2023: holiday event  </h1>
     <h1 className="mt-4">October 20 2023: event in moa </h1>

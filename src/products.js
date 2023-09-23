@@ -1,12 +1,12 @@
-import product1 from "./assets/products/1.webp";
+import product1 from "./assets/products/1.jpg";
 import product2 from "./assets/products/2.jpg";
 import product3 from "./assets/products/3.jpg";
 import product4 from "./assets/products/4.jpg";
 import product5 from "./assets/products/5.jpg";
 import product6 from "./assets/products/6.jpg";
-import product7 from "./assets/products/7.webp";
-import product8 from "./assets/products/8.webp";
-import product9 from "./assets/products/9.webp";
+import product7 from "./assets/products/7.jpg";
+import product8 from "./assets/products/8.jpg";
+import product9 from "./assets/products/9.jpg";
 
 export const PRODUCTS = [
   {

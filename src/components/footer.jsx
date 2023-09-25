@@ -28,12 +28,12 @@ function Footer() {
                 <ul className="list-unstyled">
                   <li>
                     <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><InstagramLogo size={32}/></a>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><FacebookLogo size={32}/></a>
+                    <a href="https://www.facebook.com/shaundy.dequilla/" target="_blank" rel="noopener noreferrer"><FacebookLogo size={32}/></a>
                     <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><TwitterLogo size={32}/></a>
                   </li>
                   <li>
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><InstagramLogo size={32}/></a>
-                    <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><FacebookLogo size={32}/></a>
+                    <a href="https://www.instagram.com/iveroooooo/" target="_blank" rel="noopener noreferrer"><InstagramLogo size={32}/></a>
+                    <a href="https://www.facebook.com/Dontbeshy913" target="_blank" rel="noopener noreferrer"><FacebookLogo size={32}/></a>
                     <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer"><TwitterLogo size={32}/></a>
                     
                   </li>

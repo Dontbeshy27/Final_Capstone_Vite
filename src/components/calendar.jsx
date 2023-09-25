@@ -19,11 +19,11 @@ function Calendar() {
         height={"90vh"}
         
      />
-    <h3 className="mt-4">September 13, 2023: holiday event  </h3>
-    <h3 className="mt-4">October 20, 2023: event in moa </h3>
-    <h3 className="mt-4">October 27, 2023: holiday event  </h3>
-    <h3 className="mt-4">November 15, 2023: Halloweenfest   </h3>
-    <h3 className="mt-4">December 21, 2023: winterfest   </h3>
+    <h3 className="m-5 p-1">September 13, 2023: Holiday event  </h3>
+    <h3 className="m-5 p-1">October 20, 2023: Event in moa </h3>
+    <h3 className="m-5 p-1">October 27, 2023: Holiday event  </h3>
+    <h3 className="m-5 p-1">November 15, 2023: Halloweenfest   </h3>
+    <h3 className="m-5 p-1">December 21, 2023: Winterfest   </h3>
     <Footer />
     </div>
   );

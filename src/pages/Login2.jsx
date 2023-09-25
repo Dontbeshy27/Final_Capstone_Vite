@@ -38,7 +38,7 @@ const Login2 = () => {
 
   return (
 <>
-      <h2 className="text-center ">Login Page</h2>
+      <h2 className="text-center text-white ">LOG IN PAGE</h2>
       <Form className="card"onSubmit={handleLogin}>
         <Form.Group className="mb-3 ">
           <Form.Label className="text-light">Email </Form.Label>

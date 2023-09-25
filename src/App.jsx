@@ -20,7 +20,7 @@ import Gallery from "./components/gallery";
 
 import { Shop } from "./pages/shop/shop";
 import { Cart } from "./pages/cart/cart";
-import Home from "./components/Home";
+import Home from "./components/home";
 
 function App() {
   return  (

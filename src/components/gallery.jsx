@@ -46,24 +46,13 @@ import "./gallery.css";
       original: "https://wallpaperaccess.com/full/5038868.jpg",
       thumbnail: "https://wallpaperaccess.com/full/5038868.jpg"
     }
-
     
   ];
 
   return (
-    
     <div className="App">
-       <video
-        id="background-video"
-        autoPlay
-        loop
-        muted
-     
-      >
-        <source src="../assets/videoBg.mp4" type="video/mp4" /> 
-      </video>
       <h1 className="center">THERE CAN ONLY BE ONE WINNER, LETS GO</h1>
-      <h2 className="center">PUBG EVENTS</h2>
+      <h2 className="center">PUBG GALLERY</h2>
       <ImageGallery
         items={images}
         showPlayButton={true}

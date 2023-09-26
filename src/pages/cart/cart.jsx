@@ -16,7 +16,7 @@ export function Cart() {
     <div className="container mt-4">
       <div className="row">
         <div className="col">
-          <h1 className="text-center text-white">Your Cart Items</h1>
+          <h1 className="text-center text-white">YOUR CART ITEMS</h1>
         </div>
       </div>
       <div className="row">
@@ -47,7 +47,7 @@ export function Cart() {
               className="btn btn-success"
               onClick={() => {
                 checkout();
-                window.alert("You bought the newest keychain! Congratulations!");
+                window.alert("You bought the ROYAL PASS!");
               }}
             >
               Checkout

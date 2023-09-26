@@ -20,7 +20,7 @@ const NavbarComponent = () => {
               <Nav.Link href="/gallery">GALLERY</Nav.Link>
               <Nav.Link href="/calendar">CALENDAR</Nav.Link>
               <NavDropdown title="MORE" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/">PUBG CLAN LIST</NavDropdown.Item>
+                <NavDropdown.Item href="/">PUBG CLANS LIST</NavDropdown.Item>
                 
                 <NavDropdown.Item href="/pages/about_us">ABOUT US</NavDropdown.Item>
               </NavDropdown>

@@ -67,7 +67,7 @@ const Pubg_clanView = () => {
     <>
     <div className="card text-white col-md-6 justify-content-center">
       <div className="card-body  m-2 cb1 text-center">
-        <h2 className="card-title">Pubg Clan View</h2>
+        <h2 className="card-title">PUBG CLAN VIEW</h2>
         {loading ? (
           <h3>Loading...</h3>
         ) : (
